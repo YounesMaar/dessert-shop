@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desserts Shop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Desserts</h1>
+    <div class="container">
+      <div class="page-grid">
+        <div class="product-grid" id="productGrid"></div>
+        <div class="cart-box">
+          <div>
+            <h2>Your Cart (<span id="cartCount">0</span>)</h2>
+            <div id="cartItems">
+              <div id="emptyCartMessage" class="empty-cart">
+                <img
+                  src="/assets/images/illustration-empty-cart.svg"
+                  alt="empty-cart"
+                />
+                <p class="empty-cart-message">
+                  Your added items will appear here
+                </p>
+              </div>
+            </div>
+
+            <div class="cart-total" id="cartTotal">$0.00</div>
+            <div class="delivery-note">
+              🌿 This is a <strong>carbon-neutral</strong> delivery
+            </div>
+          </div>
+          <button type="button" class="confirm-btn" disabled="false">
+            Confirm Order
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Order Confirmation Modal -->
+    <div class="order-confirmation" style="display: none">
+      <div class="confirmation-box">
+        <h2>Order Confirmed</h2>
+        <p>We hope you enjoy your food!</p>
+        <div class="order-items">
+          <!-- Order items will be populated here -->
+        </div>
+        <div class="order-total">
+          <span>Order Total</span>
+          <strong>$0.00</strong>
+          <!-- Will be updated by JavaScript -->
+        </div>
+        <button class="start-new-order">Start New Order</button>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
