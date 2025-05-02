@@ -1,4 +1,4 @@
 ﻿# dessert-shop
 
 
-# [Live Demo]([URL](https://desert-shop.netlify.app/))
+# [=> Live Demo](https://desert-shop.netlify.app/)
