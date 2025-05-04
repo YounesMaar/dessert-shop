@@ -104,6 +104,17 @@ function addToCart(name, price) {
   console.log(`Added ${name} to the cart`); // Debug log to check if item is added
   updateCart();
   document.querySelector(".confirm-btn").disabled = false;
+
+  Toastify({
+    text: "Product added",
+    position: "center",
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      borderRadius: "30px",
+    },
+    duration: 3000,
+  }).showToast();
 }
 
 // Function to remove items from the cart
@@ -112,6 +123,16 @@ function removeFromCart(name) {
   console.log(`Removed ${name} from the cart`); // Debug log to check if item is removed
   updateCart(); // Update cart display
   renderEmptyCartMessage();
+  Toastify({
+    text: "Product Removed From Cart",
+    position: "center",
+    stopOnFocus: true,
+    style: {
+      background: "indianred",
+      borderRadius: "30px",
+    },
+    duration: 3000,
+  }).showToast();
 }
 
 // Function to show the order confirmation modal
@@ -136,6 +157,17 @@ function startNewOrder() {
   // Reset the cart count and total in the main cart
   cartCountEl.textContent = "0";
   cartTotalEl.textContent = "$0.00";
+
+  Toastify({
+    text: "Purhase has been made",
+    position: "center",
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      borderRadius: "30px",
+    },
+    duration: 3000,
+  }).showToast();
 }
 // Display products in the grid
 products.forEach(({ name, price, img }) => {
